@@ -1,9 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import Constant from '../constant';
-Vue.use(Vuex);
+import Constant from '@/common/constant';
 
-const todolist = new Vuex.Store({
+export default {
+    namespaced: true,
     state: {
         todolist: [
             { todo: "영화보기", done: false },
@@ -39,6 +37,4 @@ const todolist = new Vuex.Store({
             state.commit(Constant.DELETE_TODO, payload);
         }
     }
-})
-
-export default todolist;
+}

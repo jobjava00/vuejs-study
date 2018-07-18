@@ -1,11 +1,12 @@
 import Vue from 'vue'
-//import store from './store/todolist'
-import store from './store/country'
-import TodoList from './components/todolist/TodoList'
-import CountryList from './components/country/CountryList'
+import store from '@/store'
+import VueRouter from 'vue-router';
+import App from './App.vue';
+
+Vue.use(VueRouter);
 
 new Vue({
-    store,
+    store: store,
     el: '#app',
-    render: h => h(CountryList)
+    render: h => h(App)
 })

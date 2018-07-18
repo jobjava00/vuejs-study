@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <search placeholder="두글자 이상 입력후 엔터!"></search>
+        <contact-list></contact-list>
+    </div>
+</template>
+
+<script>
+import Search from './Search.vue';
+import ContactList from './ContactList.vue';
+export default {
+    name : 'ContactListView',
+    components : {Search, ContactList}
+}
+</script>
+

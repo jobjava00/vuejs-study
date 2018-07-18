@@ -10,18 +10,19 @@
 </template>
 
 <script>
-import Constant from '../../constant';
 import { mapGetters, mapMutations } from 'vuex';
+import Constant from '@/common/constant';
+import Namespace from '@/common/namespace';
 
 export default {
     name : "RegionButtons"    ,
-    computed : mapGetters(['regions', 'currentRegion']),
+    computed : mapGetters(Namespace.COUNTRY, ['regions', 'currentRegion']),
     methods : {
         isSelected(region){
             if(region == this.currentRegion) return { selected : true };
             else return { selected : false };
         },
-        ...mapMutations([
+        ...mapMutations(Namespace.COUNTRY, [
             Constant.CHANGE_REGION
         ])
     }

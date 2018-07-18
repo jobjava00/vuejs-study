@@ -6,16 +6,15 @@
 </template>
 
 <script>
-import Constant from '../../constant'
+import Constant from '@/common/constant';
+import Namespace from '@/common/namespace';
 
 export default {
     name : 'InputTodo',
-    data(){ 
-        return { todo : ""}
-    },
+    data(){ return { todo : ""}},
     methods: {
         addTodo() {
-            this.$store.dispatch(Constant.ADD_TODO, {todo : this.todo});
+            this.$store.dispatch(Namespace.TODO_LIST+"/"+ Constant.ADD_TODO, {todo : this.todo});
             this.todo = "";
         }
     }

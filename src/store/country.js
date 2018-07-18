@@ -1,10 +1,8 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import Constant from '../constant';
+import Constant from '@/common/constant';
 import _ from 'lodash';
-Vue.use(Vuex);
 
-const country = new Vuex.Store({
+export default {
+    namespaced: true,
     state: {
         currentRegion: "all",
         countries: [
@@ -49,6 +47,4 @@ const country = new Vuex.Store({
             state.currentRegion = payload.region;
         }
     }
-})
-
-export default country;
+}
