@@ -23,7 +23,7 @@ import Constant from '../../constant';
 import {mapGetters} from 'vuex';
 
 export default {
-    name : 'CountryList',
+    name : 'List',
     computed : mapGetters({
         countries : 'countriesByRegion'
     })

@@ -10,9 +10,9 @@
 
 <script>
 import InputTodo from './InputTodo.vue';
-import List from './List';
+import List from './List.vue';
 export default {
-    name : 'todo-list',
+    name : 'TodoList',
     components : {InputTodo, List}
 }
 </script>

@@ -9,7 +9,7 @@
 import Constant from '../../constant'
 
 export default {
-    name : 'input-todo',
+    name : 'InputTodo',
     data(){ 
         return { todo : ""}
     },

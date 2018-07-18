@@ -13,6 +13,7 @@ import Constant from '../../constant';
 import {mapState, mapMutations, mapActions} from 'vuex';
 
 export default {
+    name : 'List',
     computed : mapState(['todolist']),
     methods : { 
         checked(done){

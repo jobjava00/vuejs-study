@@ -10,7 +10,7 @@ import RegionButtons from './RegionButtons.vue';
 import List from './List.vue';
 
 export default {
-    name : 'app',
+    name : 'CountryList',
     components : { RegionButtons, List}
 }
 </script>
