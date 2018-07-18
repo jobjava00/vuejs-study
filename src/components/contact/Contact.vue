@@ -27,27 +27,27 @@
 </template>
 
 <script>
-import ContactList from '@/store/contact/state';
-export default {
-    name : "contact",
-    data(){
-        return {
-            no : 0,
-            contacts : ContactList.contacts
-        }
-    },
-    created(){
-        this.no = this.$route.params.no;
-    },
-    computed : {
-        contact(){
-            let no = this.no;
-            let arr = this.contacts.filter(function(item, index){
-                return item.no == no;
-            });
-            if(arr.length == 1) return arr[0];
-            else return {};
+    import ContactList from '@/store/contact/state';
+    export default {
+        name: "contact",
+        data() {
+            return {
+                no: 0,
+                contacts: ContactList.contacts
+            }
+        },
+        created() {
+            this.no = this.$route.params.no;
+        },
+        computed: {
+            contact() {
+                let no = this.no;
+                let arr = this.contacts.filter(function(item, index) {
+                    return item.no == no;
+                });
+                if (arr.length == 1) return arr[0];
+                else return {};
+            }
         }
     }
-}
 </script>

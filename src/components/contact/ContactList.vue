@@ -23,11 +23,13 @@
     </div>
 </template>
 <script>
-import {mapState} from 'vuex';
-import Namespace from '@/common/namespace';
+    import {
+        mapState
+    } from 'vuex';
+    import Namespace from '@/common/namespace';
 
-export default {
-    name : "contactList",
-    computed : mapState(Namespace.CONTACT,['contacts'])
-}
+    export default {
+        name: "contactList",
+        computed: mapState(Namespace.CONTACT, ['contacts'])
+    }
 </script>

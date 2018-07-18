@@ -8,6 +8,6 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     modules: { contact, todolist, country }
-})
+});
 
 export default store;

@@ -1,5 +1,5 @@
-import Constant from '@/common/constant';
-import SearchApi from '@/api/SearchApi';
+import Constant from '@/common/constant'
+import SearchApi from '@/api/SearchApi'
 
 export default {
     [Constant.SEARCH_CONTACT]: (store, payload) => {

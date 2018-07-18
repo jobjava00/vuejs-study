@@ -24,25 +24,33 @@
 </template>
 
 <script>
-import VueRouter from 'vue-router';
-import TodoList from '@/components/todolist/TodoListView.vue';
-import Country from '@/components/country/CountryListView.vue';
-import Contacts from '@/components/contact/ContactListView.vue';
-import Contact from '@/components/contact/Contact.vue';
+    import VueRouter from 'vue-router';
+    import TodoList from '@/components/todolist/TodoListView.vue';
+    import Country from '@/components/country/CountryListView.vue';
+    import Contacts from '@/components/contact/ContactListView.vue';
+    import Contact from '@/components/contact/Contact.vue';
 
+    const router = new VueRouter({
+        routes: [{
+            path: '/',
+            component: TodoList
+        }, {
+            path: '/todolist',
+            component: TodoList
+        }, {
+            path: '/country',
+            component: Country
+        }, {
+            path: '/contacts',
+            component: Contacts
+        }, {
+            path: '/contacts/:no',
+            component: Contact
+        }]
+    });
 
-const router = new VueRouter({
-    routes : [
-        { path:'/', component : TodoList},
-        { path:'/todolist', component : TodoList},
-        { path:'/country', component : Country},
-        { path:'/contacts', component : Contacts},
-        { path: '/contacts/:no', component : Contact}
-    ]
-});
-
-export default {
-   name : 'app' ,
-   router
-}
+    export default {
+        name: 'app',
+        router
+    }
 </script>
