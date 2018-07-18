@@ -1,10 +1,11 @@
 import Vue from 'vue'
-import store from './store/todolist'
+import todolistStore from './store/todolist'
+import countryStore from './store/country'
 import TodoList from './components/todolist/TodoList'
 import App from './components/country/CountryList'
 
 new Vue({
-    store,
+    countryStore,
     el: '#app',
-    render: h => h(TodoList)
+    render: h => h(App)
 })

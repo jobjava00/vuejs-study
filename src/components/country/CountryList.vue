@@ -1,17 +1,17 @@
 <template>
     <div id="app">
         <region-buttons></region-buttons>
-        <country-list></country-list>
+        <list></list>
     </div>
 </template>
 
 <script>
 import RegionButtons from './RegionButtons.vue';
-import CountryList from './CountryList.vue';
+import List from './List.vue';
 
 export default {
     name : 'app',
-    components : { RegionButtons, CountryList}
+    components : { RegionButtons, List}
 }
 </script>
 

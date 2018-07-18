@@ -15,7 +15,7 @@ import { mapGetters, mapMutations } from 'vuex';
 
 export default {
     name : "RegionButtons"    ,
-    computed : mapGetters(['country.regions', 'currentRegion']),
+    computed : mapGetters(['regions', 'currentRegion']),
     methods : {
         isSelected(region){
             if(region == this.currentRegion) return { selected : true };
