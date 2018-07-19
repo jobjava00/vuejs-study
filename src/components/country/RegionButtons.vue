@@ -10,21 +10,28 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
-import Constant from '@/common/constant';
-import Namespace from '@/common/namespace';
+    import {
+        mapGetters,
+        mapMutations
+    } from 'vuex';
+    import Constant from '@/common/constant';
+    import Namespace from '@/common/namespace';
 
-export default {
-    name : "RegionButtons"    ,
-    computed : mapGetters(Namespace.COUNTRY, ['regions', 'currentRegion']),
-    methods : {
-        isSelected(region){
-            if(region == this.currentRegion) return { selected : true };
-            else return { selected : false };
-        },
-        ...mapMutations(Namespace.COUNTRY, [
-            Constant.CHANGE_REGION
-        ])
+    export default {
+        name: "RegionButtons",
+        computed: mapGetters(Namespace.COUNTRY, ['regions', 'currentRegion']),
+        methods: {
+            isSelected(region) {
+                if (region == this.currentRegion) return {
+                    selected: true
+                };
+                else return {
+                    selected: false
+                };
+            },
+            ...mapMutations(Namespace.COUNTRY, [
+                Constant.CHANGE_REGION
+            ])
+        }
     }
-}
 </script>

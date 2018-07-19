@@ -6,17 +6,23 @@
 </template>
 
 <script>
-import Constant from '@/common/constant';
-import Namespace from '@/common/namespace';
+    import Constant from '@/common/constant';
+    import Namespace from '@/common/namespace';
 
-export default {
-    name : 'InputTodo',
-    data(){ return { todo : ""}},
-    methods: {
-        addTodo() {
-            this.$store.dispatch(Namespace.TODO_LIST+"/"+ Constant.ADD_TODO, {todo : this.todo});
-            this.todo = "";
+    export default {
+        name: 'InputTodo',
+        data() {
+            return {
+                todo: ""
+            }
+        },
+        methods: {
+            addTodo() {
+                this.$store.dispatch(Namespace.TODO_LIST + "/" + Constant.ADD_TODO, {
+                    todo: this.todo
+                });
+                this.todo = "";
+            }
         }
     }
-}
 </script>

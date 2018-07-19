@@ -6,12 +6,14 @@
 </template>
 
 <script>
-import RegionButtons from './RegionButtons.vue';
-import CountryList from './CountryList.vue';
+    import RegionButtons from './RegionButtons.vue';
+    import CountryList from './CountryList.vue';
 
-export default {
-    name : 'CountryListView',
-    components : { RegionButtons, CountryList}
-}
+    export default {
+        name: 'CountryListView',
+        components: {
+            RegionButtons,
+            CountryList
+        }
+    }
 </script>
-

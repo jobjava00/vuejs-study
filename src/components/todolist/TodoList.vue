@@ -9,26 +9,34 @@
 </template>
 
 <script>
-import {mapState, mapMutations, mapActions} from 'vuex';
-import Constant from '@/common/constant';
-import Namespace from '@/common/namespace';
+    import {
+        mapState,
+        mapMutations,
+        mapActions
+    } from 'vuex';
+    import Constant from '@/common/constant';
+    import Namespace from '@/common/namespace';
 
-export default {
-    name : 'TodoList',
-    computed : mapState(Namespace.TODO_LIST,['todolist']),
-    methods : { 
-        checked(done){
-            if(done) return { checked:true };
-            else return { checked:false };
-        },
-        ...mapMutations(Namespace.TODO_LIST,[
-            Constant.DELETE_TODO,
-            Constant.DONE_TOGGLE
-        ]),
-        ...mapActions(Namespace.TODO_LIST,[
-            Constant.DELETE_TODO,
-            Constant.DONE_TOGGLE
-        ])
+    export default {
+        name: 'TodoList',
+        computed: mapState(Namespace.TODO_LIST, ['todolist']),
+        methods: {
+            checked(done) {
+                if (done) return {
+                    checked: true
+                };
+                else return {
+                    checked: false
+                };
+            },
+            ...mapMutations(Namespace.TODO_LIST, [
+                Constant.DELETE_TODO,
+                Constant.DONE_TOGGLE
+            ]),
+            ...mapActions(Namespace.TODO_LIST, [
+                Constant.DELETE_TODO,
+                Constant.DONE_TOGGLE
+            ])
+        }
     }
-}
 </script>

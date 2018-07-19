@@ -7,4 +7,4 @@ export default {
     state: state,
     mutations: mutation,
     actions: action
-}
+};

@@ -19,14 +19,16 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
-import Constant from '@/common/constant';
-import Namespace from '@/common/namespace';
+    import {
+        mapGetters
+    } from 'vuex';
+    import Constant from '@/common/constant';
+    import Namespace from '@/common/namespace';
 
-export default {
-    name : 'CountryList',
-    computed : mapGetters(Namespace.COUNTRY, {
-        countries : 'countriesByRegion'
-    })
-}
+    export default {
+        name: 'CountryList',
+        computed: mapGetters(Namespace.COUNTRY, {
+            countries: 'countriesByRegion'
+        })
+    }
 </script>

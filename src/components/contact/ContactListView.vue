@@ -6,11 +6,13 @@
 </template>
 
 <script>
-import Search from './Search.vue';
-import ContactList from './ContactList.vue';
-export default {
-    name : 'ContactListView',
-    components : {Search, ContactList}
-}
+    import Search from './Search.vue';
+    import ContactList from './ContactList.vue';
+    export default {
+        name: 'ContactListView',
+        components: {
+            Search,
+            ContactList
+        }
+    }
 </script>
-

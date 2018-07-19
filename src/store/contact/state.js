@@ -10,4 +10,4 @@ export default {
         { no: 1008, name: '김시민', tel: '010-1212-3338', address: '진주' },
         { no: 1009, name: '정약용', tel: '010-1212-3339', address: '남양주' }
     ]
-}
+};

@@ -9,11 +9,13 @@
 </template>
 
 <script>
-import InputTodo from './InputTodo.vue';
-import TodoList from './TodoList.vue';
-export default {
-    name : 'TodoListView',
-    components : {InputTodo, TodoList}
-}
+    import InputTodo from './InputTodo.vue';
+    import TodoList from './TodoList.vue';
+    export default {
+        name: 'TodoListView',
+        components: {
+            InputTodo,
+            TodoList
+        }
+    }
 </script>
-
