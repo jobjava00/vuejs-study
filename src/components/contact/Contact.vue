@@ -30,18 +30,10 @@
     import ContactList from '@/store/contact/state';
     export default {
         name: "contact",
+        props: ['no'],
         data() {
             return {
-                no: 0,
                 contacts: ContactList.contacts
-            }
-        },
-        created() {
-            this.no = this.$route.params.no;
-        },
-        watch: {
-            '$route' (to, from) {
-                this.no = to.params.no;
             }
         },
         computed: {

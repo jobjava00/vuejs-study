@@ -30,6 +30,7 @@
     import Country from '@/components/country/CountryListView.vue';
     import Contacts from '@/components/contact/ContactListView.vue';
     import Contact from '@/components/contact/Contact.vue';
+    import NotFound from '@/components/NotFound.vue';
 
     const router = new VueRouter({
         routes: [{
@@ -49,8 +50,12 @@
             children: [{
                 path: ':no',
                 name: 'contactbyno',
-                component: Contact
+                component: Contact,
+                props: true
             }]
+        }, {
+            path: '*',
+            component: NotFound
         }]
     });
 
