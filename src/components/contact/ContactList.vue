@@ -10,16 +10,15 @@
                 </tr>
             </thead>
             <tbody id="contacts">
-                <tr v-for="contact in contacts" :key="contact.no">
-                    <router-link v-bind:to="'/contacts/'+contact.no">
-                        <td>{{contact.no}}</td>
-                        <td>{{contact.name}}</td>
-                        <td>{{contact.tel}}</td>
-                        <td>{{contact.address}}</td>
-                    </router-link>
+                <tr v-for="contact in contacts" :key="contact.no" @click="navigate(contact.no)">
+                    <td>{{contact.no}}</td>
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.tel}}</td>
+                    <td>{{contact.address}}</td>
                 </tr>
             </tbody>
         </table>
+        <router-view></router-view>
     </div>
 </template>
 <script>
@@ -30,6 +29,20 @@
 
     export default {
         name: "contactList",
-        computed: mapState(Namespace.CONTACT, ['contacts'])
+        computed: mapState(Namespace.CONTACT, ['contacts']),
+        methods: {
+            navigate(no) {
+                if (confirm("상세 정보를 보시겠습니까?")) {
+                    this.$router.push({
+                        name: 'contactbyno',
+                        params: {
+                            no: no
+                        }
+                    }, function() {
+                        console.log("/contacts/" + no + " 로 이동 완료!")
+                    })
+                }
+            }
+        }
     }
 </script>

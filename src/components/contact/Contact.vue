@@ -39,6 +39,11 @@
         created() {
             this.no = this.$route.params.no;
         },
+        watch: {
+            '$route' (to, from) {
+                this.no = to.params.no;
+            }
+        },
         computed: {
             contact() {
                 let no = this.no;

@@ -5,13 +5,14 @@
             <nav>
                 <ul>
                     <li>
-                        <router-link to="/todolist">Todo-List</router-link>
+                        <!-- 객체 바인딩은 v-bind 로 해야 함 -->
+                        <router-link v-bind:to="{name: 'todolist'}">Todo-List</router-link>
                     </li>
                     <li>
                         <router-link to="/country">Country</router-link>
                     </li>
                     <li>
-                        <router-link to="/contacts">Contacts</router-link>
+                        <router-link v-bind:to="{name: 'contacts'}">Contacts</router-link>
                     </li>
                 </ul>
             </nav>
@@ -36,16 +37,20 @@
             component: TodoList
         }, {
             path: '/todolist',
+            name: 'todolist',
             component: TodoList
         }, {
             path: '/country',
             component: Country
         }, {
             path: '/contacts',
-            component: Contacts
-        }, {
-            path: '/contacts/:no',
-            component: Contact
+            name: 'contacts',
+            component: Contacts,
+            children: [{
+                path: ':no',
+                name: 'contactbyno',
+                component: Contact
+            }]
         }]
     });
 

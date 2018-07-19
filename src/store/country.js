@@ -25,20 +25,20 @@ export default {
         ]
     },
     getters: {
-        countriesByRegion (state) {
-            if (state.currentRegion === 'all') {
+        countriesByRegion(state) {
+            if (state.currentRegion === "all") {
                 return state.countries;
             } else {
                 return state.countries.filter(c => c.region === state.currentRegion);
             }
         },
-        regions (state) {
+        regions(state) {
             let temp = state.countries.map((c) => c.region);
             temp = _.uniq(temp);
             temp.splice(0, 0, 'all');
             return temp;
         },
-        currentRegion (state) {
+        currentRegion(state) {
             return state.currentRegion;
         }
     },
